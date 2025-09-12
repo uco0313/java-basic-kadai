@@ -1,18 +1,17 @@
 package kadai_018;
 
 public abstract class Kato_Chapter18 {
-    public String familyName;
-    public String givenName;
-    public String address;
+    public String familyName = "加藤"; // 課題の要件に合わせて初期値を設定
+    public String givenName; // 氏名はsetGivenNameメソッドで設定
+    public String address = "東京都中野区〇×"; // 課題の要件に合わせて初期値を設定
 
-    public Kato_Chapter18(String familyName, String givenName, String address) {
-        this.familyName = familyName;
-        this.givenName = givenName;
-        this.address = address;
+    // 氏名をセットするメソッドを追加
+    public void setGivenName(String name) {
+        this.givenName = name;
     }
 
     public void commonIntroduce() {
-        System.out.println("私の名前は" + familyName + givenName + "です");
+        System.out.println("名前は" + familyName + givenName + "です");
         System.out.println("住所は" + address + "です");
     }
 
